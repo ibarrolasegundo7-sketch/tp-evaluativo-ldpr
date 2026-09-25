@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Arial, sans-serif;
+    cursor: default;
+}
+
+body{
+    background-color: #1a1a1a;
+}
+
+.nav{
+    background-color: #0d0d0d;
+    font-size: 20px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.nav label{
+    background-color: #0d0d0d;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition:
+        scale 0.1s ease;
+}
+
+.nav label:hover{
+    scale: 1.1;
+    border-bottom: #ffd60a 1px solid;
+    color: #ffd60a ;
+}   
+
+.contenedorDeProductos{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+
+    gap: 100px 35px;
+    padding: 50px;
+
+    max-width: 1400px;
+    margin: auto;
+}
+
+.productoContent{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 25px;
+    height: 200px;
+
+    color: #F5F7FF;
+
+    background-color: #2a2a2a;
+    border-radius: 10px;
+
+    transition:
+        scale 0.1s ease;
+}
+
+.productoContent:hover{
+    scale: 1.1;
+}
+
+.nombreProducto{
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #1a1a1a;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ffb800;
+}
+
+.precioProducto{
+    font-size: 20px;
+    color: #ffd60a;
+    background-color: transparent;
+}
+
+.carritoImg{
+    height: 50px;
+    padding: 10px;
+
+    position: absolute;
+    top: 70%;
+    left: 80%;
+
+    border-radius: 10px;
+    border: 1px solid #ffd60a;
+
+    transition:
+        scale 0.1s ease;
+}
+
+.carritoImg:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.eliminarProducto, .EditarProducto{
+    display: none;
+    position: absolute;
+    top: -15px;
+    left: 100%;
+    transform: translateX(-50%);
+
+    border: 1px solid #ffd60a;
+    border-radius: 999px;
+
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+
+    background-color: #0d0d0d;
+
+    cursor: pointer;
+}
+
+.form{
+    background-color: #0d0d0d;
+
+    position: absolute;
+    justify-self: center;
+
+    top: 15%;
+
+    height: 450px;
+    width: 500px;
+
+    border-radius: 10px;
+    border: 1px solid #F5F7FF;
+
+    display: none;
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    padding: 20px;
+}
+
+form div{
+    margin: 10px;
+    pad: 10px;
+    
+    align-self: center;
+}
+
+#Editar, #cancelar, #agregarProducto, #cerrar, #cancelarBusqueda, #buscar{
+    border: none ;
+    background-color: #ffd60a;
+
+    padding: 10px;
+    width: 150px;
+
+    border-radius: 5px;
+
+    color: #1a1a1a;
+    cursor: pointer;
+
+    transition: 0.1s ease;
+}
+
+#Editar:hover, #cancelar:hover, #cerrar:hover, #agregarProducto:hover, #cancelarBusqueda:hover, #buscar:hover{
+    scale: 1.1;
+}
+
+#cancelar, #cerrar, #cancelarBusqueda{
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #F5F7FF;
+}
+
+.form div input{
+    background-color: #2a2a2a;
+    border: none;
+
+    padding: 5px;
+
+    color: #F5F7FF;
+
+    border-radius: 3px;
+}
+
+form div input:focus{
+    outline: none;
+}
+
+.tituloBusqueda{
+    justify-content: center;
+    align-self: center;
+    font-size: 25px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <nav class="nav">
+        <label for="" class="inicio" data-nombre="inicio">inicio</label>
+        <label for="" class="eliminar" data-nombre="eliminar" data-contrario="Editar">eliminar</label>
+        <label for="" class="Editar" data-nombre="Editar" data-contrario="eliminar">editar</label>
+        <label for="" class="agregar" data-nombre="agregar">agregar</label>
+        <label for="" class="filtros" data-nombre="buscar">filtros</label>
+    </nav>
+
+    <section class="contenedorDeProductos"></section>
+
+    <form action="" class="form formEditar">
+        <div><label for="">Nombre:</label> <input type="text" name="nombre" id="nombre"></div>
+        <div><label for="">Stock:</label> <input type="text" name="stock" id="stock"></div>
+        <div><label for="">Precio:</label> <input type="text" name="precio" id="precio"></div>
+        <div><button id="Editar">Editar</button></div>
+        <div><button id="cancelar" type="button">Cancelar</button></div>
+    </form> 
+
+    <form action="" class="form formAgregar">
+        <div><label for="">Nombre:</label> <input type="text" name="nombre" id="nombreAgregar"></div>
+        <div><label for="">Stock:</label> <input type="int" name="stock" id="stockAgregar"></div>
+        <div><label for="">Precio:</label> <input type="int" name="precio" id="precioAgregar"></div>
+        <div><button id="agregarProducto">Agregar</button></div>
+        <div><button id="cerrar">Cancelar</button></div>
+    </form> 
+
+    <form action="" class="form formBuscar">
+        <label for="" class="tituloBusqueda">buscar por rango</label>
+        <div><label for="">Precio Min: </label><input type="number" class="Min"></div>
+        <div><label for="">Precio Max: </label><input type="number" name="" class="Max"></div>
+        <div><button id="buscar">Buscar</button></div>
+        <div><button id="cancelarBusqueda">Cancelar</button></div>
+    </form>
+</body>
+</html>
