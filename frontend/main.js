@@ -83,7 +83,6 @@ async function filtrarBusqueda(precioMin, precioMax) {
         if (!response.ok) throw new Error('Error en la solicitud');
 
         const data = await response.json();
-        console.log(data)
 
         return data
     } catch (error) {
@@ -124,13 +123,13 @@ function crearTarjetaProducto(producto) {
     // creo el la img del carrito
     const carritoImg = document.createElement('img')
     carritoImg.className = 'carritoImg'
-    carritoImg.src = "../img/carrito.svg"
+    carritoImg.src = "img/carrito.svg"
 
     // creo el boton de eliminar
     const btnEliminar = document.createElement('img')
 
     btnEliminar.className = 'eliminarProducto'
-    btnEliminar.src = "../img/eliminar.svg"
+    btnEliminar.src = "img/eliminar.svg"
 
     btnEliminar.addEventListener("click", async function () {
         await eliminarProducto(producto.id);
@@ -142,7 +141,7 @@ function crearTarjetaProducto(producto) {
     const btnEditar = document.createElement("img");
 
     btnEditar.className = "EditarProducto";
-    btnEditar.src = "../img/editar.svg";
+    btnEditar.src = "img/editar.svg";
 
     btnEditar.addEventListener("click", async function () {
         editarProductoForm(producto.id, producto.nombre, producto.stock, producto.precio);
@@ -178,7 +177,7 @@ nav.addEventListener("click", function (event) {
         inicio()
     } else if (e.dataset.nombre == "agregar") {
         formAgregar.style.display = 'flex'
-    } else if (e.dataset.nombre == 'buscar'){
+    } else if (e.dataset.nombre == 'buscar') {
         formBuscar.style.display = 'flex'
     }
 
@@ -241,7 +240,7 @@ document.getElementById('agregarProducto').addEventListener('click', function ()
     agregarProductoFrom()
 })
 
-document.getElementById('buscar').addEventListener("click", async function(event){
+document.getElementById('buscar').addEventListener("click", async function (event) {
     event.preventDefault()
     const precioMin = document.querySelector('.Min').value
     const precioMax = document.querySelector('.Max').value
@@ -255,7 +254,7 @@ document.getElementById('buscar').addEventListener("click", async function(event
     precioMin = ''
 });
 
-document.getElementById('cancelarBusqueda').addEventListener('click', function(event){
+document.getElementById('cancelarBusqueda').addEventListener('click', function (event) {
     event.preventDefault()
     formBuscar.style.display = 'none'
 })

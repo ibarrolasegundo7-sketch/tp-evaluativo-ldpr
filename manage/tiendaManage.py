@@ -1,5 +1,8 @@
 import sqlite3
 from model import Producto
+from abc import ABC, abstractmethod
+
+
 
 class TiendaManage:
     def __init__(self):
