@@ -1,10 +1,8 @@
 import sqlite3
 from model import Producto
-from abc import ABC, abstractmethod
+from interface import TiendaManageInterface
 
-
-
-class TiendaManage:
+class TiendaManage(TiendaManageInterface):
     def __init__(self):
         pass
 
